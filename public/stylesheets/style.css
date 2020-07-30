@@ -804,8 +804,9 @@ input[type=submit], .reset-btn {
     font-size: 1.2rem; }
   .footer__text {
     font-size: 1.2rem; }
-  .footer__copyright {
-    font-size: 1.2rem; }
+    .footer__text--copyright {
+      font-size: 1.2rem;
+      margin-bottom: 2rem; }
   .footer-nav {
     list-style: none; }
     .footer-nav__link:link, .footer-nav__link:visited {

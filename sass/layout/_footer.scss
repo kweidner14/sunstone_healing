@@ -13,11 +13,14 @@
 
   &__text {
     font-size: 1.2rem;
+
+    &--copyright {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
   }
 
-  &__copyright {
-    font-size: 1.2rem;
-  }
+
 
   &-nav {
     list-style: none;
