@@ -1,0 +1,102 @@
+.videoheader-body {
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .5;
+
+    &--content {
+      height: 900px;
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+
+    }
+  }
+}
+
+.header__content {
+  height: 90rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  & h1 {
+    font-family: 'Monoton', cursive;
+  }
+
+  @media only screen and (max-width: $bp-900) {
+    margin: 8rem auto;
+  }
+  @media only screen and (max-width: $bp-500) {
+    margin: 9rem auto;
+  }
+}
+
+.animated-wave {
+  position:relative;
+  overflow:hidden;
+  background-color:transparent;
+  z-index:1;
+  height: 120px;
+  margin-top: -6.6rem;
+
+  @media (min-width:48em) {
+
+  }
+
+  &__wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+  }
+
+  &__wave {
+    background:url(../images/wave-yellow-leaf.svg) repeat-x;
+    width:6400px;
+    height:120px;
+    -webkit-animation:wave 14s cubic-bezier(.36,.45,.63,.53) infinite;
+    animation:wave 14s cubic-bezier(.36,.45,.63,.53) infinite;
+    position:absolute;
+    top:0;
+
+    -webkit-transform:translateZ(0);
+    transform:translateZ(0);
+
+    @media (max-width:48em) {
+      width:3200px;
+      height:80px;
+      top: 6rem;
+    background:url(../images/wave-neutal.svg) repeat-x;
+      -webkit-animation:wave 40s cubic-bezier(.36,.45,.63,.53) infinite;
+      animation:wave 40s cubic-bezier(.36,.45,.63,.53) infinite;
+    }
+
+    @media only screen and (max-width: $bp-500) {
+      top: 9rem;
+    }
+  }
+
+}
+@-webkit-keyframes wave {
+  0% {
+    margin-left: 0
+  }
+  to {
+    margin-left: -1600px
+  }
+}
+@keyframes wave {
+  0% {
+    margin-left: 0
+  }
+  to {
+    margin-left: -1600px
+  }
+}

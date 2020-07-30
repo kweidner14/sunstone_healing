@@ -1,0 +1,120 @@
+<% if(title === 'Home') { %>
+    <nav class="navbar" id="mainNavbar" aria-label="Primary" style="background-color: transparent;">
+<% } else { %>
+    <nav class="navbar" id="mainNavbar" aria-label="Primary" style="background-color: #f1ebde">
+<% } %>
+        <div id="" class="navbar__mobile">
+            <div id="mobile-navigation" data-section-id="navigation-mobile" data-section-type="navigation-section">
+
+                <div class="navigation">
+                    <input type="checkbox" id="navi-toggle" class="navigation__checkbox">
+                    <label for="navi-toggle" class="navigation__button">
+                        <span class="navigation__icon">&nbsp;</span>
+                    </label>
+
+                    <div class="navigation__background">&nbsp;</div>
+
+                    <nav class="navigation__nav">
+                        <ul class="navigation__list">
+                            <li class="navigation__item"><a href="/" class="">
+                                    <span class="navigation__item--link btn btn--primary">Home</span>
+                                </a></li>
+                            <li class="navigation__item"><a href="/posts" class="mobile-navi__main-link">
+                                    <span class="mobile-navi__main-link-text btn btn--primary">Blog</span>
+                                </a></li>
+                            <li class="navigation__item"><a href="/offerings" class="mobile-navi__main-link">
+                                    <span class="mobile-navi__main-link-text btn btn--primary">Offerings</span>
+                                </a></li>
+                            <li class="navigation__item"><a href="/about" class="mobile-navi__main-link">
+                                    <span class="mobile-navi__main-link-text btn btn--primary">About</span>
+                                </a></li>
+                        </ul>
+
+                        <div class="mobile-nav-menu">
+                            <h2 class="mobile-nav-menu__title">Questions or Concerns?</h2>
+                            <ul class="mobile-nav-menu__list">
+                                <li class="mobile-nav-menu__item">
+                                    <a href="/contact"><span class="mobile-navi__main-link-text btn btn--primary">Contact</span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="social-icons">
+                            <li class="social-icon__item">
+                                <a href="https://www.instagram.com/emily.bloomandshine/" class="nav-footer__link"><i class="social-icon__link fab fa-instagram fa-2x footer-btn"></i></a>
+                            </li>
+
+                            <li class="social-icon__item">
+                                <a href="https://www.facebook.com/Emily-Blumenshine-Intuitive-ChannelReiki-Master-108032797313043/" class="nav-footer__link"><i class="social-icon__link fab fa-facebook-square fa-2x footer-btn"></i></a>
+                            </li>
+
+                            <li class="social-icon__item">
+                                <a href="/contact" class="nav-footer__link"><i class="social-icon__link far fa-envelope fa-2x footer-btn"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="mobile-navi" class="mobile-navi" data-dropdown-parent="" role="dialog">
+                    <div class="mobile-navi__container container">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="" class="navbar__main">
+            <ul class="navbar__links">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__link">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/posts" class="navbar__link">
+                        Blog
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/offerings" class="navbar__link">
+                        Offerings
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <a href="/" class="navbar__brand">
+            <img src="/images/lotus.png" alt="" class="navbar__logo">
+        </a>
+        <div id="" class="navbar__right">
+            <ul class="navbar__links">
+                <li class="navbar__item navbar__item--mobile-hidden">
+                    <a href="/about" class="navbar__link">
+                        About
+                    </a>
+                </li>
+                <li class="navbar__item navbar__item--mobile-hidden">
+                    <a href="/contact" class="navbar__link">
+                        Contact
+                    </a>
+                </li>
+                <% if(!currentUser) { %>
+                <li class="navbar__item">
+                    <a href="/login" class="navbar__link">
+                        Login
+                    </a>
+                </li>
+                <% } else { %>
+                    <li class="navbar__item">
+                        <a href="/logout" class="navbar__link">
+                            Logout
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+
+    </nav>

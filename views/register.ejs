@@ -1,0 +1,21 @@
+<% include ./partials/header.ejs %>
+
+<% include ./partials/flash-messages.ejs %>
+
+<form action="/register" method="POST" enctype="multipart/form-data">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="username" value="<%= username %>" required>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="password" required>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="email" value="<%= email %>" required>
+    </div>
+    <input type="submit">
+</form>
+
+<% include ./partials/footer.ejs %>

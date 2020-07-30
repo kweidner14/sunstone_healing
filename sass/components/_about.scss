@@ -1,0 +1,40 @@
+.about {
+  display: grid;
+  top: -10rem;
+
+  &__title {
+    text-align: center;
+    padding-top: 10rem;
+    margin-bottom: 5rem;
+
+  }
+
+  &__img {
+    width: 40rem;
+    border-radius: 50%;
+    margin: 1rem auto 0;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .65);
+
+  }
+
+  &__point {
+    margin: 10rem auto;
+    padding: 2rem;
+    width: 80rem;
+  }
+
+  &__content {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: $bp-650) {
+  .about {
+
+    &__point {
+      width: 50rem;
+    }
+  }
+
+}

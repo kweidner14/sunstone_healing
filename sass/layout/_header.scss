@@ -1,0 +1,17 @@
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  height: 100%;
+
+
+  background-color: rgba($color-primary, .2);
+
+  align-self: center;
+  text-align: center;
+
+
+  &__content {
+    margin: 0 auto;
+    position: relative;
+  }
+}

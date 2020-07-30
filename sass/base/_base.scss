@@ -1,0 +1,71 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // sets rem to 10px
+
+  @media only screen and (max-width: $bp-900) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-500) {
+    font-size: 40%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+
+}
+
+.home-container {
+  display: grid;
+
+  //ROW TRACKS
+  grid-template-rows: repeat(6, min-content);
+
+  //COLUMN TRACKS
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 65rem) [col-end])
+  [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+body.scrolloff {
+  overflow: hidden;
+}
+
+.show {
+  display: block;
+}
+.container--xl {
+  max-width: 83.75rem;
+}
+.container--md {
+  max-width: 55rem;
+}
+
+.container--sm {
+  max-width: 41.25rem;
+}
+
+
+::selection {
+  color: $color-secondary-light;
+  background-color: $color-primary;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto
+}
+
+.flash {
+  position: absolute;
+  top: 9rem;
+  margin-left: 2rem;
+}

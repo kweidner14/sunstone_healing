@@ -1,0 +1,28 @@
+.custom-search-input {
+  width: 80%;
+  border: none;
+  border-bottom: 2px solid #757575;
+  background: transparent;
+  outline: none;
+  padding-bottom: 5px;
+  min-width: 250px;
+  text-indent: 40px;
+}
+
+.search-area {
+  width: 100%;
+}
+
+.search-icon {
+  font-size: 18px;
+  margin-right: -20px;
+  margin-top: 3px;
+}
+
+input[type=submit], .reset-btn {
+  background-color: #e8e8e7;
+  color: $color-black;
+  margin-top: 0 !important;
+  font-size: 1.2rem !important;
+  padding: 1rem 2rem !important;
+}

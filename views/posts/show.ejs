@@ -1,0 +1,44 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/navbar.ejs %>
+
+<section class="posts-show-section">
+    <div class="posts-show-wrapper"></div>
+    <div class="post-show">
+        <div class="post-show__content">
+
+            <div class="post-show__content--imagecontainer">
+                <% post.images.forEach(function(image) { %>
+                    <div style="background-image: url(<%= image.url %>); background-size: cover; background-position: center;" class="post-show__content--imagecontainer--image">
+                    </div>
+                <% }); %>
+                <div class="post-show__content--imagecontainer--text__container">
+                    <div class="">
+                        <h1 class="heading-primary heading-primary--main blog-title"><%= post.title %></h1>
+                        <h2 class="heading-primary heading-primary--sub blog-subtitle"><%= post.description %></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-show__content--body"><%- post.body %></div>
+
+            <% if(currentUser && post.author.equals(currentUser._id)) { %>
+                <div class="post-show__content--editBtn">
+                    <a href="/posts/<%= post.id %>/edit" class="btn btn--white">
+                        Edit Post
+                    </a>
+                </div>
+                <div class="post-show__content--deleteBtn">
+                    <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+                        <input class="btn btn--white" type="submit" value="Delete Post">
+                    </form>
+                </div>
+            <% } %>
+            <div class="post-show__content--bottom-btn">
+                <a href="/posts#blog-index" class="btn btn--primary">Back to All Posts</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<% include ../partials/footer.ejs %>

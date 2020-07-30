@@ -1,0 +1,38 @@
+<% include ./partials/header.ejs %>
+<% include ./partials/navbar.ejs %>
+<% include ./partials/flash-messages.ejs %>
+
+<!--<div class="login">-->
+<!--    <div class="login__header">-->
+<!--        <h2 class="heading-secondary">-->
+<!--            This is the admin login page only! <br>-->
+<!--            You do not need to create an account-->
+<!--        </h2>-->
+<!--    </div>-->
+<!--    <form action="/login" method="POST" class="login-form">-->
+<!--        <div class="login__username">-->
+<!--            <label for="username">Username:</label>-->
+<!--            <input type="text" id="username" name="username" placeholder="username" required>-->
+<!--        </div>-->
+<!--        <div class="login__password">-->
+<!--            <label for="password">Password:</label>-->
+<!--            <input type="password" id="password" name="password" placeholder="password" required>-->
+<!--        </div>-->
+
+<!--        <input type="submit" value="Login">-->
+<!--    </form>-->
+
+<div class="login-clean">
+    <h2>Admin Login Only!</h2>
+    <form action="/login" method="POST">
+        <h2 class="sr-only">Login Form</h2>
+        <div class="illustration"><i class="fas fa-sign-in-alt"></i></div>
+        <div class="form-group"><input class="form-control" type="text" name="username" id="username" placeholder="Username" required /></div>
+        <div class="form-group"><input class="form-control" type="password" name="password" id="password" placeholder="Password" required /></div>
+        <input class="btn btn--primary" type="submit" value="LOG IN">
+    </form>
+</div>
+
+
+
+<% include ./partials/footer.ejs %>

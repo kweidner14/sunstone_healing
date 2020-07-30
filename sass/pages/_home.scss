@@ -1,0 +1,63 @@
+.about {
+  background-color: $color-background;;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.learn {
+  background-color: $color-background;;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+.services {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+
+  &__title {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  &__button {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 53.6rem;
+    grid-template-rows: 75rem;
+    padding: 2rem 0 4rem;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+.section-reviews {
+  background-color: $color-background;
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+
+  display: grid;
+}
+
+.section-contact {
+  background-color: rgba($color-primary, .7);
+  background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
+}
+
+@media only screen and (max-width: $bp-360) {
+  .services {
+    &__cards {
+      grid-template-columns: 48rem;
+      grid-template-rows: 88rem;
+      padding: 0;
+    }
+  }
+}

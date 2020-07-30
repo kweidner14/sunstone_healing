@@ -1,0 +1,118 @@
+.reviews {
+  padding: 5rem 0;
+  position: relative;
+
+  &__title {
+    text-align: center;
+    margin-top: 8rem;
+  }
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &__story {
+    width: 75%;
+    margin: 2rem auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .6);
+    border-radius: 3px;
+    padding: 6rem;
+    transform: skewX(-12deg);
+
+    &--shape {
+      margin-left: .8rem;
+      width: 15rem;
+      height: 15rem;
+      float: left;
+      transform: translateX(-3rem) skewX(12deg);
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+
+      @supports (clip-path: polygon(0 0 )) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%); // exactly center horizontally and vertically
+        border-radius: 0;
+      }
+
+    }
+
+    &--img {
+      height: 100%;
+
+      transform: translateX(0) scale(1.2);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transition: all .5s;
+    }
+
+    &--text {
+      transform: skewX(12deg);
+
+      &-title {
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+
+      &-p {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      color: $color-white;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      text-align: center;
+      opacity: 0;
+      transition: all .5s;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    &:hover &--caption {
+      opacity: 1;
+      transform: translate(-50%, -50%); // moves the caption to the center
+    }
+
+    &:hover &--img {
+      transform: translateX(0) scale(1);
+      filter: blur(3px) brightness(80%);
+
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-440) {
+  .review {
+    &__story {
+      transform: skewX(0);
+      &--shape {
+        transform: skewX(0);
+        margin-right: 1rem;
+      }
+      &--text {
+        transform: skewX(0);
+        font-size: 1.5rem;
+        &-title {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

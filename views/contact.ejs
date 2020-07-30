@@ -1,0 +1,43 @@
+<% include ./partials/header.ejs %>
+<% include ./partials/navbar.ejs %>
+
+
+<section class="contactsection">
+    <div class="contact-page">
+        <div class="contact-page__card">
+            <div class="contact-page__card--details">
+                <div class="contact-page__card--title">
+                    <h2 class="contact-page__card--title-text">
+                        Let's Get in Touch!
+                    </h2>
+                </div>
+                <div class="contact-page__card--info">
+                    <p class="contact-page__card--info-text">
+                        Any and all questions are welcome here. <br><br>
+                        Feel free to reach out at any time and I'll get back to you as soon as I possibly can. <br><br>
+                        <em><strong>BIG LOVE!</strong></em>
+                    </p>
+                </div>
+                <div class="contact-page__card--form">
+                    <form action="/contact" method="POST" class="form" id="form">
+                        <div class="form__grid">
+
+                            <input type="text" class="form__input form__grid--name" id="name" required>
+                            <label for="name" class="form__label form__grid--namelabel">Name</label>
+
+                            <input type="email" name="email" class="form__input form__grid--email" id="email" required>
+                            <label for="email" class="form__label form__grid--emaillabel">Email</label>
+
+                            <textarea id="message" cols="40" rows="10" name="message" class="form__grid--message" required></textarea>
+                            <label for="message" class="form__label form__grid--messagelabel">Message</label>
+
+                            <button type="submit" class="btn btn--primary form__grid--btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<% include ./partials/footer.ejs %>

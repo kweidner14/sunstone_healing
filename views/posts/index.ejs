@@ -1,0 +1,53 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/navbar.ejs %>
+
+<section class="post-index-body">
+<div class="blog-wrapper">
+</div>
+    <div class="">
+        <% include ../partials/secondaryHeader.ejs %>
+    </div>
+
+    <div class="post-index-body__search">
+        <div class="">
+            <div class="search-area">
+                <% include ../partials/searchFilter.ejs %>
+            </div>
+        </div>
+    </div>
+
+    <% if(currentUser) { %>
+    <div class="post-index-body__add">
+        <div>
+            <a href="/posts/new" class="btn btn--primary">Add New Post</a>
+        </div>
+    </div>
+    <% } %>
+
+
+        <div id="blog-index" class="blog-index">
+            <% posts.docs.forEach(function(post) { %>
+                <div class="blog-index__post">
+                    <div class="blog-index__post--content">
+                        <div class="blog-index__post--content--container"><img class="blog-index__post--content--container__image" src="<%= post.images[0].url %>" alt="blog image" ></div>
+                        <h2 class="blog-index__post--content--title"><%= post.title %></h2>
+                        <div class="blog-index__post--content--desc"><%- post.description.substring(0, 50) %>...</div>
+                        <div class="blog-index__post--content--view-btn"><a class="btn btn--white blog-view-btn" href="/posts/<%= post.id %>">View post</a></div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    <div class="blog-paginate">
+        <% include ../partials/paginatePosts.ejs %>
+    </div>
+
+</section>
+
+
+
+
+<% include ../partials/footer.ejs %>
+
+<script>
+  var posts = { features: <%- JSON.stringify(posts.docs) %> };
+</script>

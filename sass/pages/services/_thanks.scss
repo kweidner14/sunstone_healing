@@ -1,0 +1,26 @@
+.thanks-section {
+  position: relative;
+  top: 9rem;
+  margin: 0 auto 9rem;
+  background-color: $color-background;
+}
+
+.thanks-page {
+  height: 74.1vh;
+
+
+  &__content {
+    text-align: center;
+    @include absCenter();
+
+    &--title {
+      font-size: 4rem;
+    }
+
+    &--text {
+      font-size: 1.8rem;
+
+    }
+  }
+}
+

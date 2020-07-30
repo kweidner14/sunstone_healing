@@ -1,0 +1,71 @@
+<% include ../partials/header.ejs%>
+
+<footer class="footer">
+    <p class="footer__text">Emily Blumenshine</p>
+    <p class="footer__text">Reiki | Tarot | Crystal Healing</p>
+    <a href="https://www.instagram.com/emily.bloomandshine/" class="footer-nav__link"><i class="fab fa-instagram fa-2x footer-btn"></i></a>
+    <a href="https://www.facebook.com/Emily-Blumenshine-Intuitive-ChannelReiki-Master-108032797313043/" class="footer-nav__link"><i class="fab fa-facebook-square fa-2x footer-btn"></i></a>
+    <a href="/contact" class="footer-nav__link"><i class="fas fa-envelope-square fa-2x footer-btn"></i></a>
+    <p class="footer__text copyright">
+        Custom built by <a class="footer-nav__link footer-btn" style="padding: 0;" href="http://www.kweidner.com">Kyle Weidner</a> &copy; 2020 <br>
+    </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+
+<!--NavBar JavaScript Scrolling Effect-->
+<script>
+  $(function () {
+    $(document).ready(function(){
+      let $nav = $("#mainNavbar");
+      $nav.toggleClass("scrolled", $(this).scrollTop() > 0);
+    })
+    $(document).scroll(function(){
+      let $nav = $("#mainNavbar");
+      $nav.toggleClass("scrolled", $(this).scrollTop() > 0);
+    })
+  })
+</script>
+
+<!-- NavBar Responsiveness and Refresh Fix -->
+<script>
+  $(document).ready(function() {
+    let $nb = $(".navigation__button");
+    let $bg = $(".navigation__background");
+    let $nav = $("#mainNavbar");
+    if($bg.css("opacity") > 0) {
+      $nb.toggleClass("active");
+      $($nav).addClass("clicked");
+      $($nav).addClass("scrolled");
+      $('body').addClass("scrolloff");
+      $($bg).css({ top: '108.44rem'})
+    }
+
+    $nb.on('click', function() {
+      $($bg).css({ top: '8.488rem' })
+      if($nb.hasClass("active")) {
+        $("#mainNavbar").removeClass("clicked");
+        $('body').removeClass("scrolloff");
+      }
+      else {
+        $('body').addClass("scrolloff");
+      }
+      $nb.toggleClass("active");
+    });
+  })
+</script>
+
+<!-- NavBar Resizing Fix -->
+<script>
+  let $bg = $(".navigation__background");
+  $( window ).resize(function() {
+    let width = $(window).width();
+    if(width >= 991){
+      $('body').removeClass("scrolloff");
+    }
+  });
+</script>
+
+</body>
+</html>

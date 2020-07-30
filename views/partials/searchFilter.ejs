@@ -1,0 +1,12 @@
+<form action="/posts" method="GET" class="search-filter">
+    <fieldset style="border: none;">
+        <i class="fas fa-search float-left search-icon"></i>
+        <input class="custom-search-input" type="text" id="search" placeholder="Search Blog Posts..."
+               name="search" value="<%= query.search %>">
+        <input type="submit" class="btn" value="Search">
+
+    </fieldset>
+    <div>
+        <a href="/posts" class="btn reset-btn">reset</a>
+    </div>
+</form>

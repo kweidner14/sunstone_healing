@@ -1,0 +1,152 @@
+<% include ./partials/header.ejs %>
+<% include ./partials/navbar.ejs %>
+<% include ./partials/flash-messages.ejs %>
+<% include ./partials/video-header.ejs %>
+    <main class="home-container">
+
+<!--     ------------ ABOUT SECTION ---------------------     -->
+    <section class="about" id="about">
+        <h2 class="heading-secondary about__title">Hi, I'm Emily Blumenshine</h2>
+        <img src="images/emily.jpg" alt="user image" class="about__img">
+        <div class="about__point">
+            <p class="about__content">
+                 I am so freaking excited you are here because that means you are ready to choose
+                you and work on accessing your Divine energy. Energy influences so much of how we live our lives,
+                whether it be internal or external. Reiki can help you get in touch with each energy center to realize your full potential and access your power!
+                <br><br>
+
+                <strong><em>I love you. The Universe loves you. Let’s heal together.</em></strong>
+            </p>
+        </div>
+    </section>
+<!-- -------------------------------------------------------- -->
+
+<!--     ------------ LEARN SECTION ---------------------     -->
+    <section class="learn" id="learn">
+        <h2 class="heading-secondary learn__title">What is Reiki?</h2>
+        <div class="learn__point learn__point--1">
+            <div class="learn__icon">
+                <i class="fas fa-heartbeat"></i>
+            </div>
+
+            <p class="learn__content">
+                Reiki is a healing modality that helps activate your bodies natural healing processes which promotes
+                physical and emotional well-being!
+            </p>
+        </div>
+        <div class="learn__point learn__point--2">
+            <div class="learn__icon">
+                <i class="fas fa-universal-access"></i>
+            </div>
+            <p class="learn__content">
+                Reiki is an intelligent Universal energy that is present all around
+                us, in all things always. It never goes away. Anyone can access it.
+            </p>
+        </div>
+        <div class="learn__point learn__point--3">
+            <div class="learn__icon">
+                <i class="fas fa-atom"></i>
+            </div>
+            <p class="learn__content">
+                Through the process of Reiki, I can assess where blockages are occurring in your energy body.
+            </p>
+        </div>
+        <div class="learn__point learn__point--4">
+            <div class="learn__icon">
+                <i class="fas fa-sun"></i>
+            </div>
+            <p class="learn__content">
+                Once you identify and harness your energy to remove these blockages, the possibilities are endless.
+            </p>
+        </div>
+        <div class="learn__btn">
+            <a href="/about" class="btn btn--white">Learn More</a>
+        </div>
+    </section>
+<!-- -------------------------------------------------------- -->
+
+
+<!--     ------------ SERVICES SECTION ---------------------     -->
+    <section class="services" id="services">
+        <div class="services__title">
+            <h2 class="heading-secondary">Offerings Currently Available</h2>
+        </div>
+
+        <div class="services__cards">
+            <div class="card">
+                <div class="card__side card__side--front">
+                    <div class="card__picture card__picture--1">
+
+                    </div>
+                    <h4 class="card__heading">
+                        <span class="card__heading-span card__heading-span--1">Energy Assessment & Realignment</span>
+                    </h4>
+
+                </div>
+
+                <div class="card__side card__side--back card__side--back-1">
+                    <div class="card__heading--back">
+                        <h4 class="card__heading--back-text">
+                            <span class="card__heading-span card__heading-span--1">Energy Assessment & Realignment</span>
+                        </h4>
+                    </div>
+                    <div class="card__cta">
+                        <div class="card__details">
+                            <ul>
+                                <li>During this session I channel Universal Reiki Energy through a surrogate to assess each one of your energy centers and where there may be blockages or excess energy residing.</li>
+                                <li>After, I write out any messages/visions/downloads that came to me during our connection.</li>
+                                <li>I then get in touch with your guides/angels to provide guidance on how to properly care for these blockages/excesses and any other messages that come through.</li>
+                                <li>After our session is complete, I will video call you and we can discuss the results of your session and your reading!</li>
+                            </ul>
+                        </div>
+                        <div class="card__price-box">
+                            <p class="card__price-only">Only</p>
+                            <p class="card__price-value">$177</p>
+                        </div>
+                        <div class="card__cta--btn">
+                            <a href="/offerings" class="btn btn--white">Book Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services__button">
+            <a href="/offerings" class="btn btn--primary">Learn more about Offerings</a>
+        </div>
+    </section>
+<!-- -------------------------------------------------------- -->
+
+
+<!--     ------------ REVIEWS SECTION ---------------------     -->
+    <section class="section-reviews">
+        <% include ./partials/reviews.ejs%>
+    </section>
+<!-- -------------------------------------------------------- -->
+
+
+<!--     ------------ CONTACT SECTION ---------------------     -->
+    <section class="section-contact">
+        <div class="contact">
+            <div class="contact__form">
+                    <div class="contact__form--header u-margin-bottom-medium">
+                        <h2 class="heading-secondary">
+                            Let's Get in Touch!
+                        </h2>
+                    </div>
+
+                    <div class="contact__form--text">
+                        <p class="contact__form--text-1">Any and all questions are welcome here.</p>
+                        <p class="contact__form--text-1">Feel free to reach out at any time and I'll get back to you as soon as I possibly can.</p>
+                        <p class="contact__form--text-1"><em><strong>BIG LOVE!</strong></em></p>
+                    </div>
+
+                    <div class="contact__form--button">
+                        <a class="btn btn--primary" href="/contact">Contact Me &rarr;</a>
+                    </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <% include ./partials/footer.ejs %>
