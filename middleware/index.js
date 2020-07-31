@@ -1,10 +1,5 @@
 const Post = require('../models/post');
 const User = require('../models/user');
-const redirectSSL = require('redirect-ssl')
-
-app.use(redirectSSL.create({
-  enabled: process.env.NODE_ENV === 'production'
-}))
 
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
