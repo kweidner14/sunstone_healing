@@ -13,7 +13,6 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-var secure = require('ssl-express-www');
 
 
 const index = require('./routes/index');
@@ -42,7 +41,6 @@ app.engine('ejs', engine);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(secure);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -88,6 +86,18 @@ app.use(function(req, res, next) {
   // continue on to next function in middleware chain
   next();
 });
+
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV === 'production') {
+    if (req.headers['x-forwarded-proto'] !== 'https')
+        // the statement for performing our redirection
+      return res.redirect('https://' + req.headers.host + req.url);
+    else
+      return next();
+  } else
+    return next();
+});
+
 
 app.use('/', index);
 app.use('/posts', posts);
