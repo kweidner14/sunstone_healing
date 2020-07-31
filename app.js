@@ -13,6 +13,7 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const secure = require('ssl-express-www');
 
 
 const index = require('./routes/index');
@@ -21,6 +22,7 @@ const offerings 	= require('./routes/offerings');
 
 
 const app = express();
+app.use(secure);
 
 mongoose.connect(process.env.ATLAS_URI, {
   useNewUrlParser: true,
