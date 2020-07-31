@@ -2,11 +2,18 @@
   display: grid;
   top: -10rem;
 
+  &__header {
+    margin: 0 auto;
+  }
+
   &__title {
     text-align: center;
     padding-top: 10rem;
     margin-bottom: 5rem;
+  }
 
+  &__image {
+    margin: 0 auto;
   }
 
   &__img {
