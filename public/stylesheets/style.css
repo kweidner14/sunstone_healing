@@ -1238,7 +1238,7 @@ input[type=submit], .reset-btn {
         width: 3200px;
         height: 80px;
         top: 6rem;
-        background: url(../images/wave-neutal.svg) repeat-x;
+        background: url(../images/wave-neutral.svg) repeat-x;
         -webkit-animation: wave 40s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
         animation: wave 40s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; } }
     @media only screen and (max-width: 31.25em) {
