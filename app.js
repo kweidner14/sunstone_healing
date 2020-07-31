@@ -13,6 +13,7 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const secure = require('ssl-express-www');
 
 
 const index = require('./routes/index');
@@ -21,20 +22,7 @@ const offerings 	= require('./routes/offerings');
 
 
 const app = express();
-
-import fast from 'fastify'
-const fastify = fast({ logger: true })
-
-fastify.addHook('onRequest', async (request, reply) => {
-  if (request.headers['x-forwarded-proto']) {
-    if (request.headers['x-forwarded-proto'] === 'http') {
-      return reply.redirect(`https://${request.headers.host}${request.raw.url}`)
-    }
-  }
-})
-
-fastify.listen(port, '0.0.0.0');
-
+app.use(secure);
 
 mongoose.connect(process.env.ATLAS_URI, {
   useNewUrlParser: true,
