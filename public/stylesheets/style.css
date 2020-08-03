@@ -1843,8 +1843,12 @@ input[type=submit], .reset-btn {
         text-align: center;
         font-size: 1.9rem;
         padding: .8rem 0; }
+      .post-show__content--body p {
+        margin-bottom: 2rem; }
+      .post-show__content--body ol {
+        margin: 0 5rem 2rem; }
     .post-show__content--editBtn {
-      margin-bottom: -3rem;
+      margin-bottom: 3rem;
       text-align: center; }
     .post-show__content--deleteBtn {
       text-align: center; }

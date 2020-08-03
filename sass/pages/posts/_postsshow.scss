@@ -27,10 +27,16 @@
          font-size: 1.9rem;
          padding: .8rem 0;
        }
+      & p {
+        margin-bottom: 2rem;
+      }
+      & ol {
+        margin: 0 5rem 2rem;
+      }
     }
 
     &--editBtn {
-      margin-bottom: -3rem;
+      margin-bottom: 3rem;
       text-align: center;
     }
     &--deleteBtn {
