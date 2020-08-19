@@ -16,7 +16,7 @@
 
                     </div>
                 </div>
-                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="services-page__product--right">
+                <div id="product-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="services-page__product--right">
                     <div class="product-info">
                         <div class="product-info__content">
                             <div class="product-info__details">
@@ -29,7 +29,7 @@
                                 </ul>
                             </div>
                             <div class="product-info__price">
-                                <h3>Only $177</h3>
+                                <h3>Only $155</h3>
                                 <div class="product-info__btn">
                                     <a href="/offerings/purchase" class="btn btn--primary">Book Now</a>
                                 </div>
@@ -63,3 +63,13 @@
 </section>
 
 <% include ../partials/footer.ejs %>
+
+<script>
+    $(window).resize( function() {
+      let win = $(this);
+      if (win.width() >= 440) {
+        let div = $('#product-right');
+        div.attr('data-aos', 'fade-up')
+      }
+    })
+</script>
